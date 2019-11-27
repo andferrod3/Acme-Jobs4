@@ -294,4 +294,52 @@
 		<property name="targetUrl" value="http://anotherexample3.com" />
 		<property name="jingle"><null /></property>
 	</bean>
+	
+		<bean id="employer1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="employer1" />
+		<property name="password" value="employer1" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Employer"/>
+				<property name="surname" value="One"/>
+				<property name="email" value="employer1@acme.com"/>
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="employer1Employer"/>
+			</list>
+		</property>
+		</bean>
+		
+	<bean name="employer1Employer" class="acme.entities.roles.Employer">
+		<property name="company" value="Employer 1 Inc."/>
+		<property name="sector" value="Sector 1"/>
+		<property name="userAccount" ref="employer1UserAccount"/>
+	</bean>
+	
+	<bean name="job1" class="acme.entities.jobs.Job">
+		<property name="reference" value="EMP1-JOB1"/>
+		<property name="title" value="Title 1"/>
+		<property name="deadline" value="2030/12/11 10:00"/>
+		<property name="salary" value="€ 15,000.98"/>
+		<property name="moreInfo" value="http://www.goikos.es"/>
+		<property name="draft" value="true"/>
+		<property name="employer" ref="employer1Employer"/>
+		<property name="descriptor" ref="descriptor1job1"/>
+	</bean>
+	
+		<bean name="descriptor1job1" class="acme.entities.jobs.Descriptor">
+		<property name="description" value="Employer 1 Inc."/>
+		<property name="duty" ref="duty1descriptor1" />
+	</bean>
+	
+		<bean name="duty1descriptor1" class="acme.entities.jobs.Duty">
+		<property name="title" value="Employer 1 Inc."/>
+		<property name="description" value="Employer 1 Inc."/>
+		<property name="percentage" value="90"/>
+	</bean>
+	
+	
 </beans>
