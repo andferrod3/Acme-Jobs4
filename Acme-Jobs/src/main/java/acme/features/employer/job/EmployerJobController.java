@@ -17,8 +17,9 @@ import acme.framework.controllers.AbstractController;
 @RequestMapping("/employer/job/")
 public class EmployerJobController extends AbstractController<Employer, Job> {
 
+
 	@Autowired
-	private EmployerJobListMineService listService;
+	private EmployerJobListMineService	listService;
 
 
 	@PostConstruct

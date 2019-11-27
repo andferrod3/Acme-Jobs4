@@ -325,7 +325,21 @@
 		<property name="deadline" value="2030/12/11 10:00"/>
 		<property name="salary" value="€ 15,000.98"/>
 		<property name="moreInfo" value="http://www.goikos.es"/>
-		<property name="isDraft" value="true"/>
+		<property name="draft" value="true"/>
 		<property name="employer" ref="employer1Employer"/>
+		<property name="descriptor" ref="descriptor1job1"/>
 	</bean>
+	
+		<bean name="descriptor1job1" class="acme.entities.jobs.Descriptor">
+		<property name="description" value="Employer 1 Inc."/>
+		<property name="duty" ref="duty1descriptor1" />
+	</bean>
+	
+		<bean name="duty1descriptor1" class="acme.entities.jobs.Duty">
+		<property name="title" value="Employer 1 Inc."/>
+		<property name="description" value="Employer 1 Inc."/>
+		<property name="percentage" value="90"/>
+	</bean>
+	
+	
 </beans>
