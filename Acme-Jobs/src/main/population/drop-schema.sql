@@ -15,6 +15,22 @@
        drop 
        foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
 
+    alter table `descriptor` 
+       drop 
+       foreign key `FKgfulfilmwi4hhaquiu7fr5g0g`;
+
+    alter table `duty` 
+       drop 
+       foreign key `FK3cc3garl37bl7gswreqwr7pj4`;
+
+    alter table `employer` 
+       drop 
+       foreign key FK_na4dfobmeuxkwf6p75abmb2tr;
+
+    alter table `job` 
+       drop 
+       foreign key `FK3rxjf8uh6fh2u990pe8i2at0e`;
+
     alter table `provider` 
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
@@ -37,7 +53,15 @@
 
     drop table if exists `consumer`;
 
+    drop table if exists `descriptor`;
+
+    drop table if exists `duty`;
+
+    drop table if exists `employer`;
+
     drop table if exists `investor_record`;
+
+    drop table if exists `job`;
 
     drop table if exists `non_commercial_banner`;
 

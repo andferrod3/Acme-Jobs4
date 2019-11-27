@@ -89,6 +89,33 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `descriptor` (
+       `id` integer not null,
+        `version` integer not null,
+        `description` varchar(255),
+        `job_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `duty` (
+       `id` integer not null,
+        `version` integer not null,
+        `description` varchar(255),
+        `percentage` double precision,
+        `title` varchar(255),
+        `descriptor_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `employer` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `company` varchar(255),
+        `sector` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `investor_record` (
        `id` integer not null,
         `version` integer not null,
@@ -96,6 +123,20 @@
         `investor_name` varchar(255),
         `sector` varchar(255),
         `stars` integer,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `job` (
+       `id` integer not null,
+        `version` integer not null,
+        `deadline` datetime(6),
+        `is_draft` bit not null,
+        `more_info` varchar(255),
+        `reference` varchar(255),
+        `salary_amount` double precision,
+        `salary_currency` varchar(255),
+        `title` varchar(255),
+        `employer_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -166,7 +207,13 @@
 create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
 create index IDXnr284tes3x8hnd3h716tmb3fr on `challenge` (`deadline`);
 create index IDX9pkce3d1y6w47wadap5s5xptc on `company_record` (`stars`);
+
+    alter table `descriptor` 
+       add constraint UK_4iw18njo4d0q8gvnhe04vmctw unique (`job_id`);
 create index IDXk2t3uthe649ao1jllcuks0gv4 on `investor_record` (`stars`);
+
+    alter table `job` 
+       add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);
 create index IDXq2o9psuqfuqmq59f0sq57x9uf on `offer` (`deadline`);
 create index IDXgkl90l0ts8y43idn6dfrvek92 on `offer` (`min_price_amount`);
 create index IDXbpkiy0wn8aympprr3vtfmkfi on `offer` (`max_price_amount`);
@@ -202,6 +249,26 @@ create index IDXby0pqf12tfiy25u5ckjdjg9lo on `request` (`reward_amount`);
        add constraint FK_6cyha9f1wpj0dpbxrrjddrqed 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `descriptor` 
+       add constraint `FKgfulfilmwi4hhaquiu7fr5g0g` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
+
+    alter table `duty` 
+       add constraint `FK3cc3garl37bl7gswreqwr7pj4` 
+       foreign key (`descriptor_id`) 
+       references `descriptor` (`id`);
+
+    alter table `employer` 
+       add constraint FK_na4dfobmeuxkwf6p75abmb2tr 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);
+
+    alter table `job` 
+       add constraint `FK3rxjf8uh6fh2u990pe8i2at0e` 
+       foreign key (`employer_id`) 
+       references `employer` (`id`);
 
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
