@@ -325,20 +325,102 @@
 		<property name="deadline" value="2030/12/11 10:00"/>
 		<property name="salary" value="€ 15,000.98"/>
 		<property name="moreInfo" value="http://www.goikos.es"/>
-		<property name="draft" value="true"/>
+		<property name="draft" value="false"/>
 		<property name="employer" ref="employer1Employer"/>
 		<property name="descriptor" ref="descriptor1job1"/>
 	</bean>
 	
 		<bean name="descriptor1job1" class="acme.entities.jobs.Descriptor">
-		<property name="description" value="Employer 1 Inc."/>
-		<property name="duty" ref="duty1descriptor1" />
+		<property name="description" value="Description One from Job One"/>
 	</bean>
 	
-		<bean name="duty1descriptor1" class="acme.entities.jobs.Duty">
-		<property name="title" value="Employer 1 Inc."/>
-		<property name="description" value="Employer 1 Inc."/>
+		<bean name="duty1descriptor1job1" class="acme.entities.jobs.Duty">
+		<property name="title" value="Duty One"/>
+		<property name="description" value="Duty One from Descriptor One from Job One"/>
 		<property name="percentage" value="90"/>
+		<property name="descriptor" ref="descriptor1job1" />
+	</bean>
+	
+			<bean id="employer2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="employer2" />
+		<property name="password" value="employer2" />
+		<property name="enabled" value="false" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Employer"/>
+				<property name="surname" value="Two"/>
+				<property name="email" value="employer2@acme.com"/>
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="employer2Employer"/>
+			</list>
+		</property>
+		</bean>
+		
+	<bean name="employer2Employer" class="acme.entities.roles.Employer">
+		<property name="company" value="Employer 2 Inc."/>
+		<property name="sector" value="Sector 2"/>
+		<property name="userAccount" ref="employer2UserAccount"/>
+	</bean>
+	
+	<bean name="job2" class="acme.entities.jobs.Job">
+		<property name="reference" value="EMP2-JOB2"/>
+		<property name="title" value="Title 2"/>
+		<property name="deadline" value="2010/12/11 10:00"/>
+		<property name="salary" value="€ 15,000.98"/>
+		<property name="moreInfo" value="http://www.goikos.es"/>
+		<property name="draft" value="false"/>
+		<property name="employer" ref="employer2Employer"/>
+		<property name="descriptor" ref="descriptor1job2"/>
+	</bean>
+	
+		<bean name="descriptor1job2" class="acme.entities.jobs.Descriptor">
+		<property name="description" value="Description One from Job Two"/>
+	</bean>
+	
+		<bean name="duty1descriptor1job2" class="acme.entities.jobs.Duty">
+		<property name="title" value="Duty One"/>
+		<property name="description" value="Duty One from Descriptor One from Job Two"/>
+		<property name="percentage" value="80"/>
+		<property name="descriptor" ref="descriptor1job2" />
+	</bean>
+	
+	<bean name="duty2descriptor1job2" class="acme.entities.jobs.Duty">
+		<property name="title" value="Duty Two"/>
+		<property name="description" value="Duty Two from Descriptor One from Job Two"/>
+		<property name="percentage" value="80"/>
+		<property name="descriptor" ref="descriptor1job2" />
+	</bean>
+	
+	<bean name="job3" class="acme.entities.jobs.Job">
+		<property name="reference" value="EMP3-JOB3"/>
+		<property name="title" value="Title 3"/>
+		<property name="deadline" value="2050/12/11 10:00"/>
+		<property name="salary" value="€ 15,000.98"/>
+		<property name="moreInfo" value="http://www.goikos.es"/>
+		<property name="draft" value="true"/>
+		<property name="employer" ref="employer2Employer"/>
+		<property name="descriptor" ref="descriptor1job3"/>
+	</bean>
+	
+		<bean name="descriptor1job3" class="acme.entities.jobs.Descriptor">
+		<property name="description" value="Description One from Job Three"/>
+	</bean>
+	
+		<bean name="duty1descriptor1job3" class="acme.entities.jobs.Duty">
+		<property name="title" value="Duty One"/>
+		<property name="description" value="Duty One from Descriptor One from Job Three"/>
+		<property name="percentage" value="80"/>
+		<property name="descriptor" ref="descriptor1job2" />
+	</bean>
+	
+	<bean name="duty2descriptor1job3" class="acme.entities.jobs.Duty">
+		<property name="title" value="Duty Two"/>
+		<property name="description" value="Duty Two from Descriptor One from Job Three"/>
+		<property name="percentage" value="80"/>
+		<property name="descriptor" ref="descriptor1job2" />
 	</bean>
 	
 	

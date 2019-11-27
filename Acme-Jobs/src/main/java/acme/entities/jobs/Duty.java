@@ -2,6 +2,8 @@
 package acme.entities.jobs;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.validation.Valid;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
@@ -29,4 +31,8 @@ public class Duty extends DomainEntity {
 	@Max(100)
 	private Double				percentage;
 
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Descriptor			descriptor;
 }

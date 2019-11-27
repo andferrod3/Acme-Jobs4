@@ -15,9 +15,9 @@
        drop 
        foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
 
-    alter table `descriptor` 
+    alter table `duty` 
        drop 
-       foreign key `FK4nx1kwe4hcc4n1wt4pbpbgjy3`;
+       foreign key `FK3cc3garl37bl7gswreqwr7pj4`;
 
     alter table `employer` 
        drop 
