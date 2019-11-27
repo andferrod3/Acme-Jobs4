@@ -2,10 +2,7 @@
 package acme.entities.jobs;
 
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -21,8 +18,4 @@ public class Descriptor extends DomainEntity {
 	@NotBlank
 	private String				description;
 
-	@NotNull
-	@Valid
-	@ManyToOne(optional = false)
-	private Duty				duty;
 }
