@@ -38,7 +38,12 @@ public class AuthenticatedDutyListService implements AbstractListService<Authent
 		assert request != null;
 		Collection<Duty> result;
 
-		result = this.repository.findManyAllFromJob(idJob);
+		int id;
+
+		String[] aux = request.getServletRequest().getQueryString().trim().split("=");
+		id = Integer.parseInt(aux[1]);
+
+		result = this.repository.findManyAllFromJob(id);
 
 		return result;
 	}

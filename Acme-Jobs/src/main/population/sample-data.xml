@@ -418,11 +418,39 @@
 	</bean>
 	
 	<bean name="duty2job3" class="acme.entities.jobs.Duty">
-		<property name="title" value="Duty Two"/>
+		<property name="title" value="Duty Two (3)"/>
 		<property name="description" value="Duty Two from Job Three"/>
 		<property name="percentage" value="80"/>
 		<property name="job" ref="job3" />
 	</bean>
+	
+	<bean name="job4" class="acme.entities.jobs.Job">
+		<property name="reference" value="EMP4-JOB4"/>
+		<property name="title" value="Title 4"/>
+		<property name="deadline" value="2050/12/11 10:00"/>
+		<property name="salary" value="€ 15,000.98"/>
+		<property name="moreInfo" value="http://www.goikos.es"/>
+		<property name="draft" value="false"/>
+		<property name="description" value="this is a description" />
+		<property name="employer" ref="employer2Employer"/>
+	</bean>
+	
+	
+		<bean name="duty1job4" class="acme.entities.jobs.Duty">
+		<property name="title" value="Duty One (4)"/>
+		<property name="description" value="Duty One from Job Four"/>
+		<property name="percentage" value="80"/>
+		<property name="job" ref="job4" />
+	</bean>
+	
+	<bean name="duty2job4" class="acme.entities.jobs.Duty">
+		<property name="title" value="Duty Two (4)"/>
+		<property name="description" value="Duty Two from Job Four"/>
+		<property name="percentage" value="80"/>
+		<property name="job" ref="job4" />
+	</bean>
+	
+	
 	
 	
 </beans>
