@@ -18,12 +18,12 @@
 
 <tiles-definitions>
 
-	<definition name="authenticated/job/list" extends="master">
-		<put-attribute name="body" type="template" value="../authenticated/job/list.jsp" />
+	<definition name="authenticated/duty/list" extends="master">
+		<put-attribute name="body" type="template" value="../authenticated/duty/list.jsp" />
 	</definition>
 	
-	<definition name="authenticated/job/form" extends="master">
-		<put-attribute name="body" type="template" value="../authenticated/job/form.jsp" />
+	<definition name="authenticated/duty/form" extends="master">
+		<put-attribute name="body" type="template" value="../authenticated/duty/form.jsp" />
 	</definition>
 
 
