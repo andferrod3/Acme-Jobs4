@@ -6,18 +6,16 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 
 import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.URL;
 
-import acme.entities.roles.Employer;
-import acme.framework.datatypes.Money;
+import acme.entities.roles.Worker;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -25,39 +23,40 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Job extends DomainEntity {
+public class Application extends DomainEntity {
 
 	private static final long	serialVersionUID	= 1L;
 
+	@NotBlank
 	@Column(unique = true)
-	@NotBlank
 	@Length(min = 5, max = 10)
-	private String				reference;
+	private String				referenceNumber;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@NotNull
+	@Past
+	private Date				moment;
+
+	@NotNull
+	private boolean				accepted;
 
 	@NotBlank
-	private String				title;
+	private String				statement;
 
-	@NotNull
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date				deadline;
+	@NotBlank
+	private String				skills;
 
-	@NotNull
-	@Valid
-	private Money				salary;
-
-	@URL
-	private String				moreInfo;
-
-	@NotNull
-	private boolean				draft;
+	@NotBlank
+	private String				qualifications;
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private Employer			employer;
+	private Worker				worker;
 
 	@NotNull
 	@Valid
-	@OneToOne(optional = false)
-	private Descriptor			descriptor;
+	@ManyToOne(optional = false)
+	private Job					job;
+
 }
