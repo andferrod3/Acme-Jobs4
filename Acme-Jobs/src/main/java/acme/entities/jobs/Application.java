@@ -38,7 +38,7 @@ public class Application extends DomainEntity {
 	private Date				moment;
 
 	@NotNull
-	private boolean				accepted;
+	private Status				status;
 
 	@NotBlank
 	private String				statement;
