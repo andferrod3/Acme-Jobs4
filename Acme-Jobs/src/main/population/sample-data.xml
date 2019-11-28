@@ -422,6 +422,6 @@
 		<property name="percentage" value="80"/>
 		<property name="descriptor" ref="descriptor1job2" />
 	</bean>
-	
+		
 	
 </beans>
