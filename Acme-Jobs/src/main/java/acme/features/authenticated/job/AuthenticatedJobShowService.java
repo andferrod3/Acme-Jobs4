@@ -5,9 +5,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.jobs.Job;
+import acme.entities.roles.Employer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
+import acme.framework.entities.UserAccount;
 import acme.framework.services.AbstractShowService;
 
 @Service
@@ -32,7 +34,7 @@ public class AuthenticatedJobShowService implements AbstractShowService<Authenti
 		assert model != null;
 
 		request.unbind(entity, model, "reference", "title", "deadline");
-		request.unbind(entity, model, "salary", "moreInfo", "draft", "description", "id");
+		request.unbind(entity, model, "salary", "moreInfo", "draft", "description", "id", "employer.userAccount.username");
 	}
 	@Override
 	public Job findOne(final Request<Job> request) {
@@ -44,6 +46,12 @@ public class AuthenticatedJobShowService implements AbstractShowService<Authenti
 		id = request.getModel().getInteger("id");
 		request.getModel().setAttribute("idJob", id);
 		result = this.repository.findOneJobById(id);
+
+		UserAccount userAccount = this.repository.findUserAccount(id);
+		Employer employer = this.repository.findEmployer(id);
+
+		employer.setUserAccount(userAccount);
+		result.setEmployer(employer);
 
 		return result;
 	}

@@ -21,3 +21,4 @@ authenticated.job.form.label.draft= ¿Es un borrador?
 authenticated.job.form.label.description=Descripción
 authenticated.job.form.button.return=Volver
 authenticated.job.form.label.duties=Ver obligaciones
+authenticated.job.form.label.username=Nombre de usuario del contratador

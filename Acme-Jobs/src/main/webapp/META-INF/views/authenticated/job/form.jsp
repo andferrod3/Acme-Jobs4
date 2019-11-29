@@ -23,6 +23,7 @@
 	<acme:form-url code="authenticated.job.form.label.moreInfo" path="moreInfo" />
 	<acme:form-checkbox code="authenticated.job.form.label.draft" path="draft" />
 	<acme:form-textarea code="authenticated.job.form.label.description" path="description" />
+	<acme:form-textarea code="authenticated.job.form.label.username" path="employer.userAccount.username" />
 	<acme:form-hidden path="id"/>
 	<acme:form-submit code="authenticated.job.form.label.duties" action="/authenticated/duty/list?id=${id}" method="get" />
 	
