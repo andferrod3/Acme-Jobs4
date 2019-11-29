@@ -18,12 +18,16 @@ import acme.framework.controllers.AbstractController;
 public class WorkerApplicationController extends AbstractController<Worker, Application> {
 
 	@Autowired
-	private WorkerApplicationListMineService listService;
+	private WorkerApplicationListMineService	listService;
+
+	@Autowired
+	private WorkerApplicationShowService		showService;
 
 
 	@PostConstruct
 	private void initialise() {
 		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listService);
+		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 
 }
