@@ -65,6 +65,9 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
+		<acme:menu-option code="master.menu.employer" access="hasRole('Employer')">
+			<acme:menu-suboption code="master.menu.employer.features.job.list" action="/employer/job/list-mine"/>
+		</acme:menu-option>
 
 	</acme:menu-left>
 
