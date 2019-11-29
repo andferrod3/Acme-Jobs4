@@ -36,6 +36,7 @@ public class AuditRecord extends DomainEntity {
 	@NotBlank
 	private String				body;
 
+	@NotNull
 	private boolean				draft;
 
 	@NotNull
