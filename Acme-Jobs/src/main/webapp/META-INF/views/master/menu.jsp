@@ -70,6 +70,10 @@
 		<acme:menu-option code="master.menu.employer" access="hasRole('Employer')">
 			<acme:menu-suboption code="master.menu.employer.features.job.list" action="/employer/job/list-mine"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
+			<acme:menu-suboption code="master.menu.auditor.features.audit-record.list" action="/auditor/audit-record/list-mine"/>
+		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.worker" access="hasRole('Worker')">
       		<acme:menu-suboption code="master.menu.worker.application.list-mine" action="/worker/application/list-mine"/>

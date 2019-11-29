@@ -168,6 +168,25 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `message` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(255),
+        `moment` datetime(6),
+        `title` varchar(255),
+        `authenticated_id` integer not null,
+        `message_thread_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `message_thread` (
+       `id` integer not null,
+        `version` integer not null,
+        `moment` datetime(6),
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `non_commercial_banner` (
        `id` integer not null,
         `version` integer not null,
@@ -326,6 +345,16 @@ create index IDXby0pqf12tfiy25u5ckjdjg9lo on `request` (`reward_amount`);
        add constraint `FK3rxjf8uh6fh2u990pe8i2at0e` 
        foreign key (`employer_id`) 
        references `employer` (`id`);
+
+    alter table `message` 
+       add constraint `FK3ny0h1379q528toyokq81noiu` 
+       foreign key (`authenticated_id`) 
+       references `authenticated` (`id`);
+
+    alter table `message` 
+       add constraint `FKn5adlx3oqjna7aupm8gwg3fuj` 
+       foreign key (`message_thread_id`) 
+       references `message_thread` (`id`);
 
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 

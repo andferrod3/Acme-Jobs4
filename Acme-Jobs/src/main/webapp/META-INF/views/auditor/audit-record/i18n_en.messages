@@ -10,3 +10,11 @@
 
 auditor.audit-record.list.label.title=Title
 auditor.audit-record.list.label.moment=Creation moment
+
+auditor.audit-record.form.label.title=Title
+auditor.audit-record.form.label.moment=Moment
+auditor.audit-record.form.label.body=Body
+auditor.audit-record.form.label.draft=Is Draft?
+auditor.audit-record.form.label.job=Job title
+	
+auditor.audit-record.form.button.return=Return
