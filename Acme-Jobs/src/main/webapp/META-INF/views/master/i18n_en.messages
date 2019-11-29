@@ -44,6 +44,7 @@ master.menu.features.challenge = Challenges
 master.menu.features.company-record = Company records
 master.menu.features.investor-record =  Investor records
 master.menu.features.offer = Offers
+master.menu.features.job = Active jobs
 
 # master.menu.administrator ###################################################
 
@@ -77,10 +78,16 @@ master.menu.consumer = Consumer
 master.menu.consumer.offers.create = Create offers
 master.menu.consumer.favourite-link = Favourite link
 
+
 # master.menu.worker ##########################################################
 
 master.menu.worker = Worker
 master.menu.worker.application.list-mine = List my applications
+
+# master.menu.employer ##########################################################
+
+master.menu.employer = Employer
+master.menu.employer.features.job.list = List jobs
 
 # master.menu.user-account ####################################################
 

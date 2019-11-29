@@ -33,6 +33,8 @@
 			<acme:menu-suboption code="master.menu.features.company-record" action="/authenticated/company-record/list"/>
 			<acme:menu-suboption code="master.menu.features.investor-record" action="/authenticated/investor-record/list"/>
 			<acme:menu-suboption code="master.menu.features.offer" action="/authenticated/offer/list"/>
+			<acme:menu-suboption code="master.menu.features.job" action="/authenticated/job/list-all-active"/>
+			
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
@@ -64,6 +66,9 @@
       		<acme:menu-suboption code="master.menu.consumer.offers.create" action="/consumer/offer/create"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
+		</acme:menu-option>
+		<acme:menu-option code="master.menu.employer" access="hasRole('Employer')">
+			<acme:menu-suboption code="master.menu.employer.features.job.list" action="/employer/job/list-mine"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.worker" access="hasRole('Worker')">
