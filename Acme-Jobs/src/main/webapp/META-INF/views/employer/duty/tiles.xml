@@ -18,12 +18,13 @@
 
 <tiles-definitions>
 
-	<definition name="employer/job/list" extends="master">
-		<put-attribute name="body" type="template" value="../employer/job/list.jsp" />
+	<definition name="employer/duty/list" extends="master">
+		<put-attribute name="body" type="template" value="../employer/duty/list.jsp" />
 	</definition>
 	
-	<definition name="employer/job/form" extends="master">
-		<put-attribute name="body" type="template" value="../employer/job/form.jsp" />
+	<definition name="employer/duty/form" extends="master">
+		<put-attribute name="body" type="template" value="../employer/duty/form.jsp" />
 	</definition>
+
 
 </tiles-definitions>
