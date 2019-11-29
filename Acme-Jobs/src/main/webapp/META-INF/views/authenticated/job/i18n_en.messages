@@ -21,3 +21,4 @@ authenticated.job.form.label.draft=Is a draft?
 authenticated.job.form.label.description=Description
 authenticated.job.form.button.return=Return
 authenticated.job.form.label.duties=View duties
+authenticated.job.form.label.username=Employer username
