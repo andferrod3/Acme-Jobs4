@@ -61,11 +61,15 @@
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
-      <acme:menu-suboption code="master.menu.consumer.offers.create" action="/consumer/offer/create"/>
+      		<acme:menu-suboption code="master.menu.consumer.offers.create" action="/consumer/offer/create"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
 
+		<acme:menu-option code="master.menu.worker" access="hasRole('Worker')">
+      		<acme:menu-suboption code="master.menu.worker.application.list-mine" action="/worker/application/list-mine"/>
+		</acme:menu-option>
+		
 	</acme:menu-left>
 
 	<acme:menu-right>

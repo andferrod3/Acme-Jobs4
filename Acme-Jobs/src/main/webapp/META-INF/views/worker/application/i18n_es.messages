@@ -8,6 +8,17 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
+worker.application.form.label.referenceNumber = Referencia
+worker.application.form.label.moment = Fecha de creación
+worker.application.form.label.status = Estatus
+worker.application.form.label.statement = Declaración
+worker.application.form.label.skills = Habilidades
+worker.application.form.label.qualifications = Títulos
+worker.application.form.label.job.title = Título del trabajo
+worker.application.form.label.job.reference = Referencia del trabajo
+
+
 worker.application.list.label.referenceNumber = Referencia
 worker.application.list.label.moment = Fecha de creación
 
+worker.application.form.button.return = Volver
