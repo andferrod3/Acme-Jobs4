@@ -17,14 +17,17 @@ import acme.framework.controllers.AbstractController;
 @RequestMapping("/employer/job/")
 public class EmployerJobController extends AbstractController<Employer, Job> {
 
-
 	@Autowired
 	private EmployerJobListMineService	listService;
+
+	@Autowired
+	private EmployerJobShowService		showService;
 
 
 	@PostConstruct
 	private void initialise() {
 		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listService);
+		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 
 }

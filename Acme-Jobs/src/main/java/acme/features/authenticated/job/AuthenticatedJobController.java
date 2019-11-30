@@ -18,12 +18,16 @@ import acme.framework.entities.Authenticated;
 public class AuthenticatedJobController extends AbstractController<Authenticated, Job> {
 
 	@Autowired
-	private AuthenticatedJobListAllActiveService listService;
+	private AuthenticatedJobListAllActiveService	listService;
+
+	@Autowired
+	private AuthenticatedJobShowService				showService;
 
 
 	@PostConstruct
 	private void initialise() {
 		super.addCustomCommand(CustomCommand.LIST_ALL_ACTIVE, BasicCommand.LIST, this.listService);
+		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 
 }

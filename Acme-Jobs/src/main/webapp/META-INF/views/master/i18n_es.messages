@@ -44,6 +44,7 @@ master.menu.features.challenge = Desafíos
 master.menu.features.company-record = Registros de compañías
 master.menu.features.investor-record =  Registro de inversiones
 master.menu.features.offer = Ofertas
+master.menu.features.job = Trabajos activos
 
 # master.menu.administrator ###################################################
 
@@ -76,6 +77,22 @@ master.menu.provider.features.request.create = Crear petición
 master.menu.consumer = Consumidor
 master.menu.consumer.offers.create = Crear ofertas
 master.menu.consumer.favourite-link = Enlace favorito
+
+# master.menu.worker ##########################################################
+
+master.menu.worker = Trabajador
+master.menu.worker.application.list-mine = Listar mis aplicaciones
+
+
+# master.menu.employer ##########################################################
+
+master.menu.employer = Contratador
+master.menu.employer.features.job.list = Listar trabajos
+
+# master.menu.auditor ##########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.features.audit-record.list = Listar registros de auditoría
 
 # master.menu.user-account ####################################################
 

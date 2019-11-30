@@ -16,9 +16,9 @@ public class Worker extends UserRole {
 	private static final long	serialVersionUID	= 1L;
 
 	@NotBlank
-	private String				QualificationsRecord;
+	private String				qualificationsRecord;
 
 	@NotBlank
-	private String				SkillsRecord;
+	private String				skillsRecord;
 
 }

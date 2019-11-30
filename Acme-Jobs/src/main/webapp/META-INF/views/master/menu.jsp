@@ -33,6 +33,8 @@
 			<acme:menu-suboption code="master.menu.features.company-record" action="/authenticated/company-record/list"/>
 			<acme:menu-suboption code="master.menu.features.investor-record" action="/authenticated/investor-record/list"/>
 			<acme:menu-suboption code="master.menu.features.offer" action="/authenticated/offer/list"/>
+			<acme:menu-suboption code="master.menu.features.job" action="/authenticated/job/list-all-active"/>
+			
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
@@ -61,11 +63,22 @@
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
-      <acme:menu-suboption code="master.menu.consumer.offers.create" action="/consumer/offer/create"/>
+      		<acme:menu-suboption code="master.menu.consumer.offers.create" action="/consumer/offer/create"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
+		<acme:menu-option code="master.menu.employer" access="hasRole('Employer')">
+			<acme:menu-suboption code="master.menu.employer.features.job.list" action="/employer/job/list-mine"/>
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
+			<acme:menu-suboption code="master.menu.auditor.features.audit-record.list" action="/auditor/audit-record/list-mine"/>
+		</acme:menu-option>
 
+		<acme:menu-option code="master.menu.worker" access="hasRole('Worker')">
+      		<acme:menu-suboption code="master.menu.worker.application.list-mine" action="/worker/application/list-mine"/>
+		</acme:menu-option>
+		
 	</acme:menu-left>
 
 	<acme:menu-right>

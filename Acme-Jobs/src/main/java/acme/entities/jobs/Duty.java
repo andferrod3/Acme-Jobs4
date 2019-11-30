@@ -34,5 +34,5 @@ public class Duty extends DomainEntity {
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private Descriptor			descriptor;
+	private Job					job;
 }

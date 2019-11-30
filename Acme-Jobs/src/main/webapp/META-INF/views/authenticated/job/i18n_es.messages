@@ -12,3 +12,13 @@ authenticated.job.list.label.reference=Referencia
 authenticated.job.list.label.deadline=Fecha límite 
 authenticated.job.list.label.title=Título
 
+authenticated.job.form.label.reference=Referencia
+authenticated.job.form.label.deadline=Fecha límite 
+authenticated.job.form.label.title=Título
+authenticated.job.form.label.salary=Salario
+authenticated.job.form.label.moreInfo=Más información
+authenticated.job.form.label.draft= ¿Es un borrador? 
+authenticated.job.form.label.description=Descripción
+authenticated.job.form.button.return=Volver
+authenticated.job.form.label.duties=Ver obligaciones
+authenticated.job.form.label.username=Nombre de usuario del contratador
