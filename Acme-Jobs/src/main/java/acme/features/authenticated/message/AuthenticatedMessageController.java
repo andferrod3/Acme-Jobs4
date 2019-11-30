@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.messageThread;
+package acme.features.authenticated.message;
 
 import javax.annotation.PostConstruct;
 
@@ -7,26 +7,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.components.CustomCommand;
-import acme.entities.messageThreads.MessageThread;
+import acme.entities.messageThreads.Message;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Authenticated;
 
 @Controller
-@RequestMapping("/authenticated/message-thread/")
-public class AuthenticatedMessageThreadController extends AbstractController<Authenticated, MessageThread> {
+@RequestMapping("/authenticated/message/")
+public class AuthenticatedMessageController extends AbstractController<Authenticated, Message> {
 
 	@Autowired
-	private AuthenticatedMessageThreadListMineService	listService;
+	private AuthenticatedMessageListService	listService;
 
 	@Autowired
-	private AuthenticatedMessageThreadShowService		showService;
+	private AuthenticatedMessageShowService	showService;
 
 
 	@PostConstruct
 	private void initialise() {
-		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listService);
+		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 
