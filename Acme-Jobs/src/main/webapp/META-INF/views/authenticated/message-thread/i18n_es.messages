@@ -1,4 +1,4 @@
-# i18n_en.messages
+# i18n_es.messages
 #
 # Copyright (c) 2019 Rafael Corchuelo.
 #
@@ -8,13 +8,5 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-auditor.audit-record.list.label.title=Title
-auditor.audit-record.list.label.moment=Creation moment
-
-auditor.audit-record.form.label.title=Title
-auditor.audit-record.form.label.moment=Moment
-auditor.audit-record.form.label.body=Body
-auditor.audit-record.form.label.draft=Is Draft?
-auditor.audit-record.form.label.job=Job title
-	
-auditor.audit-record.form.button.return=Return
+authenticated.messageThread.list.label.title = Título
+authenticated.messageThread.list.label.moment = Fecha de creación 

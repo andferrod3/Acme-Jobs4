@@ -47,6 +47,14 @@
        drop 
        foreign key `FK3rxjf8uh6fh2u990pe8i2at0e`;
 
+    alter table `message` 
+       drop 
+       foreign key `FK3ny0h1379q528toyokq81noiu`;
+
+    alter table `message` 
+       drop 
+       foreign key `FKn5adlx3oqjna7aupm8gwg3fuj`;
+
     alter table `provider` 
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
@@ -86,6 +94,10 @@
     drop table if exists `investor_record`;
 
     drop table if exists `job`;
+
+    drop table if exists `message`;
+
+    drop table if exists `message_thread`;
 
     drop table if exists `non_commercial_banner`;
 

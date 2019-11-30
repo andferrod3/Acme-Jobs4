@@ -88,6 +88,13 @@ master.menu.worker.application.list-mine = List my applications
 
 master.menu.employer = Employer
 master.menu.employer.features.job.list = List jobs
+master.menu.employer.application.list-mine = List applications
+
+# master.menu.auditor ##########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.features.audit-record.list = List audit records
+master.menu.auditor.features.job.list = List jobs
 
 # master.menu.auditor ##########################################################
 master.menu.auditor = Auditor

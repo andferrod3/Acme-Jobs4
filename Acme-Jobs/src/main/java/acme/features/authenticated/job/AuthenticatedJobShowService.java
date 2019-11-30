@@ -1,6 +1,10 @@
 
 package acme.features.authenticated.job;
 
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +27,17 @@ public class AuthenticatedJobShowService implements AbstractShowService<Authenti
 	public boolean authorise(final Request<Job> request) {
 		assert request != null;
 
-		boolean result = true;
+		boolean result;
+		int jobId;
+		Job job;
+
+		jobId = request.getModel().getInteger("id");
+		job = this.repository.findOneJobById(jobId);
+
+		Calendar actual = new GregorianCalendar();
+
+		Date fechaActual = actual.getTime();
+		result = !job.isDraft() && job.getDeadline().after(fechaActual);
 
 		return result;
 	}
