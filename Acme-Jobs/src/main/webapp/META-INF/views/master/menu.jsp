@@ -71,7 +71,7 @@
 			<acme:menu-suboption code="master.menu.employer.features.job.list" action="/employer/job/list-mine"/>
 		</acme:menu-option>
 		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
-			<acme:menu-suboption code="master.menu.auditor.features.job.list" action="/auditor/job/list-mine"/>
+			<acme:menu-suboption code="master.menu.auditor.features.job.list" action="/auditor/job-written/list-mine"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.worker" access="hasRole('Worker')">
