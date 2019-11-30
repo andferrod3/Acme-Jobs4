@@ -88,12 +88,17 @@ master.menu.worker.application.list-mine = Listar mis aplicaciones
 
 master.menu.employer = Contratador
 master.menu.employer.features.job.list = Listar trabajos
+master.menu.employer.application.list-mine = Listar aplicaciones
 
 # master.menu.auditor ##########################################################
 
 master.menu.auditor = Auditor
+master.menu.auditor.features.audit-record.list = Listar registros de auditoría
 master.menu.auditor.features.job.list = Listar mis trabajos
 
+# master.menu.auditor ##########################################################
+master.menu.auditor = Auditor
+master.menu.auditor.features.job.list = Listar mis trabajos
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
