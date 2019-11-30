@@ -21,5 +21,9 @@
 	<definition name="auditor/job/list" extends="master">
 		<put-attribute name="body" type="template" value="../auditor/job/list.jsp" />
 	</definition>
+	
+	<definition name="auditor/job/form" extends="master">
+		<put-attribute name="body" type="template" value="../auditor/job/form.jsp" />
+	</definition>
 
 </tiles-definitions>
