@@ -96,6 +96,9 @@ master.menu.auditor = Auditor
 master.menu.auditor.features.audit-record.list = Listar registros de auditoría
 master.menu.auditor.features.job.list = Listar mis trabajos
 
+# master.menu.auditor ##########################################################
+master.menu.auditor = Auditor
+master.menu.auditor.features.job.list = Listar mis trabajos
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
