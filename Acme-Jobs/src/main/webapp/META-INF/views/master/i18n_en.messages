@@ -93,6 +93,7 @@ master.menu.employer.features.job.list = List jobs
 
 master.menu.auditor = Auditor
 master.menu.auditor.features.audit-record.list = List audit records
+master.menu.auditor.features.job.list = List jobs
 
 # master.menu.user-account ####################################################
 
