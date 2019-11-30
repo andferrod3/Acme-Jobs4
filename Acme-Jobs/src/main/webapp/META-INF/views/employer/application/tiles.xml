@@ -21,5 +21,9 @@
 	<definition name="employer/application/list" extends="master">
 		<put-attribute name="body" type="template" value="../employer/application/list.jsp" />
 	</definition>
+	
+	<definition name="employer/application/form" extends="master">
+		<put-attribute name="body" type="template" value="../employer/application/form.jsp" />
+	</definition>
 
 </tiles-definitions>
