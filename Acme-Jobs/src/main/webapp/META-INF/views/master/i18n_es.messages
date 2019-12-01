@@ -95,6 +95,7 @@ master.menu.employer.application.list-mine = Listar aplicaciones
 
 master.menu.auditor = Auditor
 master.menu.auditor.features.audit-record.list = Listar registros de auditoría
+master.menu.auditor.features.notwrittenjob.list = Listar trabajos con registros de auditoría no míos
 master.menu.auditor.features.job.list = Listar trabajos que contienen mis registros de auditoría
 
 # master.menu.user-account ####################################################

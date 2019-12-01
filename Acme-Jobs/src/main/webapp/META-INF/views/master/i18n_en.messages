@@ -95,6 +95,7 @@ master.menu.employer.application.list-mine = List applications
 
 master.menu.auditor = Auditor
 master.menu.auditor.features.audit-record.list = List audit records
+master.menu.auditor.features.notwrittenjob.list = List jobs with audit records not written by me
 master.menu.auditor.features.job.list = List jobs that contains my audit records
 
 # master.menu.user-account ####################################################
