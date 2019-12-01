@@ -95,11 +95,8 @@ master.menu.employer.application.list-mine = List applications
 
 master.menu.auditor = Auditor
 master.menu.auditor.features.audit-record.list = List audit records
-master.menu.auditor.features.job.list = List jobs
+master.menu.auditor.features.job.list = List jobs that contains my audit records
 
-# master.menu.auditor ##########################################################
-master.menu.auditor = Auditor
-master.menu.auditor.features.job.list = List jobs
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
