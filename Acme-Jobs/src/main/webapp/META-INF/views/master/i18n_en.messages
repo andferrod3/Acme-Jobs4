@@ -45,6 +45,7 @@ master.menu.features.company-record = Company records
 master.menu.features.investor-record =  Investor records
 master.menu.features.offer = Offers
 master.menu.features.job = Active jobs
+master.menu.features.message-thread = Message threads
 
 # master.menu.administrator ###################################################
 
@@ -88,12 +89,14 @@ master.menu.worker.application.list-mine = List my applications
 
 master.menu.employer = Employer
 master.menu.employer.features.job.list = List jobs
+master.menu.employer.application.list-mine = List applications
 
 # master.menu.auditor ##########################################################
 
 master.menu.auditor = Auditor
 master.menu.auditor.features.audit-record.list = List audit records
-master.menu.auditor.features.notwrittenjob.list = List jobs not written by me
+master.menu.auditor.features.notwrittenjob.list = List jobs with audit records not written by me
+master.menu.auditor.features.job.list = List jobs that contains my audit records
 
 # master.menu.user-account ####################################################
 

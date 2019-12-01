@@ -1,4 +1,4 @@
-# i18n_es.messages
+# i18n_en.messages
 #
 # Copyright (c) 2019 Rafael Corchuelo.
 #
@@ -8,10 +8,10 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.messageThread.list.label.title = Título del hilo
-authenticated.messageThread.list.label.moment = Fecha de creación 
+authenticated.message.list.label.title = Message's title
+authenticated.message.list.label.moment = Creation moment
 
-authenticated.messageThread.form.label.title = Título del hilo
-authenticated.messageThread.form.label.moment = Fecha de creación
-authenticated.messageThread.form.label.messages = Mensajes del hilo
-authenticated.messageThread.form.button.return = Volver
+authenticated.message.form.label.title = Message's title
+authenticated.message.form.label.moment = Creation moment
+authenticated.message.form.label.body = Message's body
+authenticated.message.form.button.return = Return

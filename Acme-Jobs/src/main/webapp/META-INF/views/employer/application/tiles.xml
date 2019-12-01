@@ -18,12 +18,12 @@
 
 <tiles-definitions>
 
-	<definition name="authenticated/message-thread/list" extends="master">
-		<put-attribute name="body" type="template" value="../authenticated/message-thread/list.jsp" />
+	<definition name="employer/application/list" extends="master">
+		<put-attribute name="body" type="template" value="../employer/application/list.jsp" />
 	</definition>
 	
-	<definition name="authenticated/message-thread/form" extends="master">
-		<put-attribute name="body" type="template" value="../authenticated/message-thread/form.jsp" />
+	<definition name="employer/application/form" extends="master">
+		<put-attribute name="body" type="template" value="../employer/application/form.jsp" />
 	</definition>
 
 </tiles-definitions>
