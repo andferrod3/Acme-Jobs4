@@ -1,5 +1,5 @@
 
-package acme.features.auditor.job;
+package acme.features.auditor.notWrittenJob;
 
 import java.util.Collection;
 
@@ -10,7 +10,7 @@ import acme.entities.jobs.Job;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface AuditorJobRepository extends AbstractRepository {
+public interface AuditorNotWrittenJobRepository extends AbstractRepository {
 
 	@Query("select j from Job j join AuditRecord ar on ar.job.id=j.id where ar.auditor.id!=?1")
 	Collection<Job> findManyByEmployerId(int auditorId);
