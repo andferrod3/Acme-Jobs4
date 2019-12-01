@@ -41,7 +41,7 @@ public class AuditorNotWrittenJobListMineService implements AbstractListService<
 		Principal principal;
 
 		principal = request.getPrincipal();
-		result = this.repository.findManyByEmployerId(principal.getActiveRoleId());
+		result = this.repository.findManyByAuditorId(principal.getActiveRoleId());
 
 		return result;
 	}

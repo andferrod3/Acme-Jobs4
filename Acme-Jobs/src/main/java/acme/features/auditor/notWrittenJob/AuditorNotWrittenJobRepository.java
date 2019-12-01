@@ -16,5 +16,5 @@ public interface AuditorNotWrittenJobRepository extends AbstractRepository {
 	Job findOneJobById(int id);
 
 	@Query("select j from Job j join AuditRecord ar on ar.job.id=j.id where ar.auditor.id!=?1")
-	Collection<Job> findManyByEmployerId(int auditorId);
+	Collection<Job> findManyByAuditorId(int auditorId);
 }
