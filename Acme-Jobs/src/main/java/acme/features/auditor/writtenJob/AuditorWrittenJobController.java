@@ -1,5 +1,5 @@
 
-package acme.features.auditor.job;
+package acme.features.auditor.writtenJob;
 
 import javax.annotation.PostConstruct;
 
@@ -14,16 +14,20 @@ import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 
 @Controller
-@RequestMapping("/auditor/job/")
-public class AuditorJobController extends AbstractController<Auditor, Job> {
+@RequestMapping("/auditor/job-written/")
+public class AuditorWrittenJobController extends AbstractController<Auditor, Job> {
 
 	@Autowired
-	private AuditorJobListMineService listService;
+	private AuditorWrittenJobListMineService	listService;
+
+	@Autowired
+	private AuditorWrittenJobShowService		showService;
 
 
 	@PostConstruct
 	private void initialise() {
 		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listService);
+		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 
 }
