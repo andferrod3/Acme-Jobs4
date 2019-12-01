@@ -23,6 +23,7 @@
 	<acme:form-url code="auditor.job.form.label.moreInfo" path="moreInfo" />
 	<acme:form-textarea code="auditor.job.form.label.description" path="description" />
 	<acme:form-checkbox code="auditor.job.form.label.draft" path="draft" />
+	<acme:form-submit code="auditor.job.form.button.link" action="/auditor/audit-record/list-mine?id=${id}" method="get" />
 	
 	<acme:form-return code="auditor.job.form.button.return"/>
 </acme:form>

@@ -10,7 +10,6 @@ import acme.entities.auditRecords.AuditRecord;
 import acme.entities.roles.Auditor;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
@@ -38,11 +37,13 @@ public class AuditorAuditRecordListMineService implements AbstractListService<Au
 	public Collection<AuditRecord> findMany(final Request<AuditRecord> request) {
 		assert request != null;
 		Collection<AuditRecord> result;
-		Principal principal;
+		int jobId;
 
-		principal = request.getPrincipal();
-		result = this.repository.findManyByEmployerId(principal.getActiveRoleId());
+		String[] aux = request.getServletRequest().getQueryString().trim().split("id=");
+		jobId = Integer.parseInt(aux[1]);
+		result = this.repository.findManyByJobId(jobId);
 
 		return result;
 	}
+
 }

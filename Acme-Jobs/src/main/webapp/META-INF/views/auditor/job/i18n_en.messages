@@ -21,3 +21,4 @@ auditor.job.form.label.description=Description
 auditor.job.form.label.duty=Duties
 auditor.job.form.button.return=Return
 auditor.job.form.label.draft=Is draft?
+auditor.job.form.button.link = List audit records
