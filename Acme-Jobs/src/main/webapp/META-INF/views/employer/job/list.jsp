@@ -19,5 +19,6 @@
 <acme:list>
 	<acme:list-column code="employer.job.list.label.reference" path="reference" width="10%" />		
    	<acme:list-column code="employer.job.list.label.deadline" path="deadline" width="10%" />
+   	<acme:list-column code="employer.job.list.label.employer" path="employer.userAccount.username" width="10%" />
    	<acme:list-column code="employer.job.list.label.title" path="title" width="80%" />	
 </acme:list>

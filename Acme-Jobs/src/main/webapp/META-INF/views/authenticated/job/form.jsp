@@ -21,11 +21,12 @@
 	<acme:form-moment code="authenticated.job.form.label.deadline" path="deadline" />
 	<acme:form-money code="authenticated.job.form.label.salary" path="salary" />
 	<acme:form-url code="authenticated.job.form.label.moreInfo" path="moreInfo" />
-	<acme:form-checkbox code="authenticated.job.form.label.draft" path="draft" />
 	<acme:form-textarea code="authenticated.job.form.label.description" path="description" />
-	<acme:form-textarea code="authenticated.job.form.label.username" path="employer.userAccount.username" />
+	<acme:form-textbox code="authenticated.job.form.label.username" path="employer.userAccount.username" />
+	<acme:form-checkbox code="authenticated.job.form.label.draft" path="draft" />
 	<acme:form-hidden path="id"/>
 	<acme:form-submit code="authenticated.job.form.label.duties" action="/authenticated/duty/list?id=${id}" method="get" />
+		<acme:form-submit code="authenticated.job.form.button.link" action="/authenticated/audit-record/list-mine?id=${id}" method="get" />
 	
 	<acme:form-return code="authenticated.job.form.button.return"/>
 </acme:form>
