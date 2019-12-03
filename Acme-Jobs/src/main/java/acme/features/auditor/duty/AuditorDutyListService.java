@@ -1,30 +1,29 @@
 
-package acme.features.authenticated.duty;
+package acme.features.auditor.duty;
+
+import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.jobs.Duty;
-import acme.entities.jobs.Job;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
-import acme.framework.services.AbstractShowService;
+import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedDutyShowService implements AbstractShowService<Authenticated, Duty> {
+public class AuditorDutyListService implements AbstractListService<Authenticated, Duty> {
 
 	@Autowired
-	AuthenticatedDutyRepository repository;
+	AuditorDutyRepository repository;
 
 
 	@Override
 	public boolean authorise(final Request<Duty> request) {
 		assert request != null;
 
-		boolean result = true;
-
-		return result;
+		return true;
 	}
 	@Override
 	public void unbind(final Request<Duty> request, final Duty entity, final Model model) {
@@ -35,17 +34,18 @@ public class AuthenticatedDutyShowService implements AbstractShowService<Authent
 		request.unbind(entity, model, "title", "description", "percentage", "job.title");
 	}
 	@Override
-	public Duty findOne(final Request<Duty> request) {
+	public Collection<Duty> findMany(final Request<Duty> request) {
 		assert request != null;
+		Collection<Duty> result;
 
-		Duty result;
 		int id;
 
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOneDutyById(id);
+		String[] aux = request.getServletRequest().getQueryString().trim().split("=");
+		id = Integer.parseInt(aux[1]);
 
-		Job job = this.repository.findJobFromDutyId(id);
-		result.setJob(job);
+		result = this.repository.findManyAllFromJob(id);
+
+		result.stream().forEach(d -> d.setJob(this.repository.findJobFromDutyId(d.getId())));
 
 		return result;
 	}
