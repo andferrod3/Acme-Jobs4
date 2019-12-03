@@ -11,6 +11,8 @@
 employer.application.list.label.referenceNumber=Reference number
 employer.application.list.label.moment=Moment
 employer.application.list.label.status=Status
+employer.application.list.label.job.reference=Job's reference
+employer.application.list.label.worker.userAccount.username=Worker's username
 
 employer.application.form.label.referenceNumber = Reference
 employer.application.form.label.moment = Moment
@@ -20,5 +22,6 @@ employer.application.form.label.skills = Skills
 employer.application.form.label.qualifications = Qualifications
 employer.application.form.label.job.title = Job's title
 employer.application.form.label.job.reference = Job's reference
+employer.application.form.label.worker.userAccount.username = Worker's username
 
 employer.application.form.button.return = Return
