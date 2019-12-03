@@ -1,5 +1,5 @@
 
-package acme.features.employer.duty;
+package acme.features.auditor.duty;
 
 import javax.annotation.PostConstruct;
 
@@ -8,19 +8,19 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import acme.entities.jobs.Duty;
-import acme.entities.roles.Auditor;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
+import acme.framework.entities.Authenticated;
 
 @Controller
-@RequestMapping("/employer/duty/")
-public class EmployerDutyController extends AbstractController<Auditor, Duty> {
+@RequestMapping("/auditor/duty/")
+public class AuditorDutyController extends AbstractController<Authenticated, Duty> {
 
 	@Autowired
-	private EmployerDutyListService	listService;
+	private AuditorDutyListService	listService;
 
 	@Autowired
-	private EmployerDutyShowService	showService;
+	private AuditorDutyShowService	showService;
 
 
 	@PostConstruct

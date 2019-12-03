@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.duty;
+package acme.features.auditor.duty;
 
 import java.util.Collection;
 
@@ -11,7 +11,7 @@ import acme.entities.jobs.Job;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface AuthenticatedDutyRepository extends AbstractRepository {
+public interface AuditorDutyRepository extends AbstractRepository {
 
 	@Query("select d from Duty d where d.id=?1")
 	Duty findOneDutyById(int id);

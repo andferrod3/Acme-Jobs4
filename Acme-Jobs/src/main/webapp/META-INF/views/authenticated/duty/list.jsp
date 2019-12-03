@@ -19,5 +19,9 @@
 <acme:list>
 	<acme:list-column code="authenticated.duty.list.label.title" path="title" width="10%" />		
    	<acme:list-column code="authenticated.duty.list.label.description" path="description" width="40%" />
-   	<acme:list-column code="authenticated.duty.list.label.percentage" path="percentage" width="10%" />	
+   	<acme:list-column code="authenticated.duty.list.label.percentage" path="percentage" width="10%" />
+   	<acme:list-column code="authenticated.duty.list.label.job.title"	path="job.title" width="10%" />	
 </acme:list>
+<acme:form>
+	<acme:form-return code="authenticated.duty.form.button.return"/>
+</acme:form>

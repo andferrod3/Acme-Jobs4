@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.duty;
+package acme.features.auditor.duty;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,10 +12,10 @@ import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AuthenticatedDutyShowService implements AbstractShowService<Authenticated, Duty> {
+public class AuditorDutyShowService implements AbstractShowService<Authenticated, Duty> {
 
 	@Autowired
-	AuthenticatedDutyRepository repository;
+	AuditorDutyRepository repository;
 
 
 	@Override
