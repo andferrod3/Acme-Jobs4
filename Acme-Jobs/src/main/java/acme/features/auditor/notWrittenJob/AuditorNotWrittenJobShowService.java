@@ -1,6 +1,10 @@
 
 package acme.features.auditor.notWrittenJob;
 
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,7 +36,10 @@ public class AuditorNotWrittenJobShowService implements AbstractShowService<Audi
 		job = this.repository.findOneJobById(jobId);
 		employer = job.getEmployer();
 		principal = request.getPrincipal();
-		result = !job.isDraft() || job.isDraft() && employer.getUserAccount().getId() == principal.getAccountId();
+		Calendar actual = new GregorianCalendar();
+
+		Date fechaActual = actual.getTime();
+		result = !job.isDraft() && job.getDeadline().after(fechaActual) || job.isDraft() && !job.getDeadline().after(fechaActual) && employer.getUserAccount().getId() == principal.getAccountId();
 		return result;
 	}
 	@Override

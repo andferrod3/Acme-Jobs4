@@ -1,7 +1,10 @@
 
 package acme.features.auditor.notWrittenJob;
 
+import java.util.Calendar;
 import java.util.Collection;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,7 +44,10 @@ public class AuditorNotWrittenJobListNotMineService implements AbstractListServi
 		Principal principal;
 
 		principal = request.getPrincipal();
-		result = this.repository.findManyByAuditorId(principal.getActiveRoleId());
+		Calendar actual = new GregorianCalendar();
+
+		Date fechaActual = actual.getTime();
+		result = this.repository.findManyByAuditorId(principal.getActiveRoleId(), fechaActual);
 
 		result.stream().forEach(j -> j.setEmployer(this.repository.findEmployer(j.getId())));
 
