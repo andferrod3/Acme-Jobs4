@@ -31,6 +31,10 @@
 	<acme:form-textbox code="administrator.dashboard.form.label.averageRewardOffer" path="averageRewardOffer"/>
 	<acme:form-textbox code="administrator.dashboard.form.labelsdMinRewardOffer" path="sdMinRewardOffer"/>	
 	<acme:form-textbox code="administrator.dashboard.form.labelsdMaxRewardOffer" path="sdMaxRewardOffer"/>
+	
+	<acme:form-textbox code="administrator.dashboard.form.label.avgJobsPerEmployer" path="avgJobsPerEmployer"/>
+	<acme:form-textbox code="administrator.dashboard.form.label.avgApplicationsPerEmployer" path="avgApplicationsPerEmployer"/>
+	<acme:form-textbox code="administrator.dashboard.form.label.avgApplicationsPerWorkers" path="avgApplicationsPerWorker"/>
 
 	
 </acme:form>
