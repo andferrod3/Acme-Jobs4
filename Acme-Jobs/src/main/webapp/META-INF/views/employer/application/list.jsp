@@ -19,5 +19,7 @@
 <acme:list>
 	<acme:list-column code="employer.application.list.label.referenceNumber" path="referenceNumber" width="20%" />		
    	<acme:list-column code="employer.application.list.label.moment" path="moment" width="20%" />
-   	<acme:list-column code="employer.application.list.label.status" path="status" width="60%" />			
+   	<acme:list-column code="employer.application.list.label.status" path="status" width="20%" />
+   	<acme:list-column code="employer.application.list.label.job.reference" path="job.reference" width="10%" />
+   	<acme:list-column code="employer.application.list.label.worker.userAccount.username" path="worker.userAccount.username" width="10%" />
 </acme:list>
