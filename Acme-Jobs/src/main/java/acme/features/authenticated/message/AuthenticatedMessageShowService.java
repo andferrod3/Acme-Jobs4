@@ -30,7 +30,7 @@ public class AuthenticatedMessageShowService implements AbstractShowService<Auth
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "moment", "body");
+		request.unbind(entity, model, "title", "moment", "tags", "body", "authenticated.userAccount.username", "messageThread.title");
 	}
 	@Override
 	public Message findOne(final Request<Message> request) {
@@ -42,6 +42,9 @@ public class AuthenticatedMessageShowService implements AbstractShowService<Auth
 		id = request.getModel().getInteger("id");
 		result = this.repository.findOneMessageThreadById(id);
 
+		Authenticated au = this.repository.findAuthenticated(result.getAuthenticated().getId());
+
+		result.setAuthenticated(au);
 		return result;
 	}
 }

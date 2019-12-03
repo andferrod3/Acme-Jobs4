@@ -18,7 +18,10 @@
 <acme:form readonly="true">
 	<acme:form-textbox code="authenticated.message.form.label.title" path="title" />		
    	<acme:form-moment code="authenticated.message.form.label.moment" path="moment" />
+   	<acme:form-textbox code="authenticated.message.form.label.tags" path="tags" />
 	<acme:form-textarea code="authenticated.message.form.label.body" path="body" />
+	<acme:form-textbox code="authenticated.message.form.label.userAccount.username" path="authenticated.userAccount.username" />	
+	<acme:form-textbox code="authenticated.message.form.label.messageThread.title" path="messageThread.title" />
 	
 	<acme:form-return code="authenticated.message.form.button.return"/>
 </acme:form>

@@ -10,8 +10,14 @@
 
 authenticated.message.list.label.title = Título del mensaje
 authenticated.message.list.label.moment = Fecha de creación 
+authenticated.message.list.label.tags = Etiquetas
+authenticated.message.list.label.messageThread.title = Título del hilo
+authenticated.message.list.button.return = Volver a mi lista de hilos
 
 authenticated.message.form.label.title = Título del mensaje
 authenticated.message.form.label.moment = Fecha de creación
+authenticated.message.form.label.tags = Etiquetas
 authenticated.message.form.label.body = Cuerpo del mensaje
+authenticated.message.form.label.userAccount.username = Usuario
+authenticated.message.form.label.messageThread.title = Título del hilo
 authenticated.message.form.button.return = Volver

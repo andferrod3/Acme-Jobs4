@@ -18,7 +18,8 @@
 <acme:form readonly="true">
 	<acme:form-textbox code="authenticated.messageThread.form.label.title" path="title" />		
    	<acme:form-moment code="authenticated.messageThread.form.label.moment" path="moment" />
-	<acme:form-submit code="authenticated.messageThread.form.label.messages" action="/authenticated/message/list?id=${id}" method="get" />
+	<acme:form-submit code="authenticated.messageThread.form.label.messages" 
+		action="/authenticated/message/list?id=${id}" method="get" />	
 	
 	<acme:form-return code="authenticated.messageThread.form.button.return"/>
 </acme:form>
