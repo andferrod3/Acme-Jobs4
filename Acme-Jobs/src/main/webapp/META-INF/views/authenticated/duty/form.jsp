@@ -19,7 +19,7 @@
 	<acme:form-textbox code="authenticated.duty.form.label.title" path="title"/>
 	<acme:form-textbox code="authenticated.duty.form.label.description" path="description" />
 	<acme:form-moment code="authenticated.duty.form.label.percentage" path="percentage" />
-	<acme:form-textbox code="authenticated.duty.form.label.job.title" path="job.title" />
+	<acme:form-textbox code="authenticated.duty.form.label.job.reference" path="job.reference" />
 
 	<acme:form-return code="authenticated.duty.form.button.return"/>
 </acme:form>

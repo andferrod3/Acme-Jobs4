@@ -11,11 +11,11 @@
 employer.duty.list.label.title=Title
 employer.duty.list.label.description=Description
 employer.duty.list.label.percentage=Percentage
-employer.duty.list.label.job.title=Job which contains it
+employer.duty.list.label.job.reference=Job which contains it
 
 employer.duty.form.label.title=Title
 employer.duty.form.label.description=Description
 employer.duty.form.label.percentage=Percentage
-employer.duty.form.label.job.title=Job which contains it
+employer.duty.form.label.job.reference=Job which contains it
 
 employer.duty.form.button.return=Return

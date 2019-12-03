@@ -31,7 +31,7 @@ public class AuditorDutyListService implements AbstractListService<Authenticated
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "description", "percentage", "job.title");
+		request.unbind(entity, model, "title", "description", "percentage", "job.reference");
 	}
 	@Override
 	public Collection<Duty> findMany(final Request<Duty> request) {
@@ -44,8 +44,6 @@ public class AuditorDutyListService implements AbstractListService<Authenticated
 		id = Integer.parseInt(aux[1]);
 
 		result = this.repository.findManyAllFromJob(id);
-
-		result.stream().forEach(d -> d.setJob(this.repository.findJobFromDutyId(d.getId())));
 
 		return result;
 	}
