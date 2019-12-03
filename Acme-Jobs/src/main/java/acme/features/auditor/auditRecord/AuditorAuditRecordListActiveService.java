@@ -1,6 +1,8 @@
 
 package acme.features.auditor.auditRecord;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,13 +10,13 @@ import acme.entities.auditRecords.AuditRecord;
 import acme.entities.roles.Auditor;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.services.AbstractShowService;
+import acme.framework.services.AbstractListService;
 
 @Service
-public class AuditorAuditRecordShowService implements AbstractShowService<Auditor, AuditRecord> {
+public class AuditorAuditRecordListActiveService implements AbstractListService<Auditor, AuditRecord> {
 
 	@Autowired
-	AuditorAuditRecordRepository repository;
+	private AuditorAuditRecordRepository repository;
 
 
 	@Override
@@ -22,24 +24,30 @@ public class AuditorAuditRecordShowService implements AbstractShowService<Audito
 		assert request != null;
 		return true;
 	}
+
 	@Override
 	public void unbind(final Request<AuditRecord> request, final AuditRecord entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "moment", "body", "draft", "job.title");
+		request.unbind(entity, model, "title", "moment", "draft", "job.title", "auditor.userAccount.username");
 
 	}
+
 	@Override
-	public AuditRecord findOne(final Request<AuditRecord> request) {
+	public Collection<AuditRecord> findMany(final Request<AuditRecord> request) {
 		assert request != null;
+		Collection<AuditRecord> result;
+		int auditorId, jobId;
 
-		AuditRecord result;
-		int id;
+		auditorId = request.getPrincipal().getActiveRoleId();
 
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOneAuditRecordById(id);
+		String[] aux = request.getServletRequest().getQueryString().trim().split("id=");
+		jobId = Integer.parseInt(aux[1]);
+		result = this.repository.findManyActiveByJobId(auditorId, jobId);
+
 		return result;
 	}
+
 }

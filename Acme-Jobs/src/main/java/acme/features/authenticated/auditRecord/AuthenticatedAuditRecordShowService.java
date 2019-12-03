@@ -1,20 +1,20 @@
 
-package acme.features.auditor.auditRecord;
+package acme.features.authenticated.auditRecord;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.auditRecords.AuditRecord;
-import acme.entities.roles.Auditor;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AuditorAuditRecordShowService implements AbstractShowService<Auditor, AuditRecord> {
+public class AuthenticatedAuditRecordShowService implements AbstractShowService<Authenticated, AuditRecord> {
 
 	@Autowired
-	AuditorAuditRecordRepository repository;
+	AuthenticatedAuditRecordRepository repository;
 
 
 	@Override
@@ -28,7 +28,7 @@ public class AuditorAuditRecordShowService implements AbstractShowService<Audito
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "moment", "body", "draft", "job.title");
+		request.unbind(entity, model, "title", "moment", "body", "draft", "job.title", "auditor.userAccount.username");
 
 	}
 	@Override
