@@ -11,11 +11,11 @@
 authenticated.duty.list.label.title=Title
 authenticated.duty.list.label.description=Description
 authenticated.duty.list.label.percentage=Percentage
-authenticated.duty.list.label.job.title=Job which contains it
+authenticated.duty.list.label.job.reference=Job which contains it
 
 authenticated.duty.form.label.title=Title
 authenticated.duty.form.label.description=Description
 authenticated.duty.form.label.percentage=Percentage
-authenticated.duty.form.label.job.title=Job which contains it
+authenticated.duty.form.label.job.reference=Job which contains it
 
 authenticated.duty.form.button.return=Return
