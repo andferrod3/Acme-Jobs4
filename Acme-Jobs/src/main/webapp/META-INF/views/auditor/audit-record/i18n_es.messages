@@ -10,6 +10,9 @@
 
 auditor.audit-record.list.label.title=Título
 auditor.audit-record.list.label.moment=Fecha de creación
+auditor.audit-record.list.label.body=Cuerpo
+auditor.audit-record.list.label.draft=¿Es un borrador?
+auditor.audit-record.list.label.job=Título del trabajo
 
 auditor.audit-record.form.label.title=Título
 auditor.audit-record.form.label.moment=Momento
