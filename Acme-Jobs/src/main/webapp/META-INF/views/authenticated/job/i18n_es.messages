@@ -11,6 +11,7 @@
 authenticated.job.list.label.reference=Referencia
 authenticated.job.list.label.deadline=Fecha límite 
 authenticated.job.list.label.title=Título
+authenticated.job.list.label.employer=Empleador
 
 authenticated.job.form.label.reference=Referencia
 authenticated.job.form.label.deadline=Fecha límite 

@@ -11,6 +11,7 @@
 authenticated.job.list.label.reference=Reference
 authenticated.job.list.label.deadline=Deadline
 authenticated.job.list.label.title=Title
+authenticated.job.list.label.employer=Employer
 
 authenticated.job.form.label.reference=Reference
 authenticated.job.form.label.deadline=Deadline 

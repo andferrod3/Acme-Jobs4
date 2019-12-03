@@ -14,7 +14,7 @@ import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuditorNotWrittenJobListMineService implements AbstractListService<Auditor, Job> {
+public class AuditorNotWrittenJobListNotMineService implements AbstractListService<Auditor, Job> {
 
 	@Autowired
 	AuditorNotWrittenJobRepository repository;
@@ -32,7 +32,7 @@ public class AuditorNotWrittenJobListMineService implements AbstractListService<
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "reference", "title", "deadline");
+		request.unbind(entity, model, "reference", "title", "deadline", "employer.userAccount.username");
 	}
 	@Override
 	public Collection<Job> findMany(final Request<Job> request) {
@@ -42,6 +42,8 @@ public class AuditorNotWrittenJobListMineService implements AbstractListService<
 
 		principal = request.getPrincipal();
 		result = this.repository.findManyByAuditorId(principal.getActiveRoleId());
+
+		result.stream().forEach(j -> j.setEmployer(this.repository.findEmployer(j.getId())));
 
 		return result;
 	}

@@ -32,7 +32,7 @@ public class EmployerJobListMineService implements AbstractListService<Employer,
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "reference", "title", "deadline");
+		request.unbind(entity, model, "reference", "title", "deadline", "employer.userAccount.username");
 	}
 	@Override
 	public Collection<Job> findMany(final Request<Job> request) {
@@ -42,6 +42,7 @@ public class EmployerJobListMineService implements AbstractListService<Employer,
 
 		principal = request.getPrincipal();
 		result = this.repository.findManyByEmployerId(principal.getActiveRoleId());
+		result.stream().forEach(j -> j.setEmployer(this.repository.findEmployer(j.getId())));
 
 		return result;
 	}

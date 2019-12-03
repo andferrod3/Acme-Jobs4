@@ -43,7 +43,7 @@ public class EmployerJobShowService implements AbstractShowService<Employer, Job
 		assert model != null;
 
 		request.unbind(entity, model, "reference", "title", "deadline");
-		request.unbind(entity, model, "salary", "moreInfo", "description", "draft");
+		request.unbind(entity, model, "salary", "moreInfo", "description", "draft", "employer.userAccount.username");
 	}
 	@Override
 	public Job findOne(final Request<Job> request) {
@@ -54,6 +54,8 @@ public class EmployerJobShowService implements AbstractShowService<Employer, Job
 
 		id = request.getModel().getInteger("id");
 		result = this.repository.findOneJobById(id);
+		Employer employer = this.repository.findEmployer(id);
+		result.setEmployer(employer);
 
 		return result;
 	}

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.jobs.Job;
 import acme.entities.roles.Auditor;
+import acme.entities.roles.Employer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.services.AbstractShowService;
@@ -30,7 +31,7 @@ public class AuditorWrittenJobShowService implements AbstractShowService<Auditor
 		assert model != null;
 
 		request.unbind(entity, model, "reference", "title", "deadline");
-		request.unbind(entity, model, "salary", "moreInfo", "description", "draft");
+		request.unbind(entity, model, "salary", "moreInfo", "description", "draft", "employer.userAccount.username");
 	}
 	@Override
 	public Job findOne(final Request<Job> request) {
@@ -41,6 +42,8 @@ public class AuditorWrittenJobShowService implements AbstractShowService<Auditor
 
 		id = request.getModel().getInteger("id");
 		result = this.repository.findOneJobById(id);
+		Employer e = this.repository.findEmployer(id);
+		result.setEmployer(e);
 
 		return result;
 	}
