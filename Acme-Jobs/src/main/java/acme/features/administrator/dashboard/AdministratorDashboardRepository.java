@@ -63,4 +63,13 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 
 	@Query("select sector from InvestorRecord group by sector")
 	String[] getInvestorSectors();
+
+	@Query("select avg(select count(j) from Job j where j.employer.id=e.id) from Employer e")
+	Double averageNumberOfJobsPerEmployer();
+
+	@Query("select avg(select count(a) from Application a where a.worker.id=w.id) from Worker w")
+	Double averageNumberOfApplicationsPerWorker();
+
+	@Query("select avg(select count(a) from Application a where exists(select j from Job j where j.employer.id=e.id and a.job.id=j.id)) from Employer e")
+	Double averageNumberOfApplicationsPerEmployer();
 }

@@ -33,4 +33,8 @@ public class Dashboard implements Serializable {
 
 	Integer[]					investorsPerSector;
 	String[]					investorSectors;
+
+	Double						avgJobsPerEmployer;
+	Double						avgApplicationsPerEmployer;
+	Double						avgApplicationsPerWorker;
 }
