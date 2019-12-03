@@ -5,13 +5,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.jobs.Duty;
+import acme.entities.roles.Auditor;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AuditorDutyShowService implements AbstractShowService<Authenticated, Duty> {
+public class AuditorDutyShowService implements AbstractShowService<Auditor, Duty> {
 
 	@Autowired
 	AuditorDutyRepository repository;

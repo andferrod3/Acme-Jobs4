@@ -8,13 +8,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import acme.entities.jobs.Duty;
+import acme.entities.roles.Auditor;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
-import acme.framework.entities.Authenticated;
 
 @Controller
 @RequestMapping("/auditor/duty/")
-public class AuditorDutyController extends AbstractController<Authenticated, Duty> {
+public class AuditorDutyController extends AbstractController<Auditor, Duty> {
 
 	@Autowired
 	private AuditorDutyListService	listService;
