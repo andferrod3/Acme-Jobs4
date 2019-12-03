@@ -17,11 +17,9 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="authenticated.message.list.label.title" path="title" width="10%" />		
-   	<acme:list-column code="authenticated.message.list.label.moment" path="moment" width="10%" />
-   	<acme:list-column code="authenticated.message.list.label.tags" path="tags" width="10%" />
+	<acme:list-column code="authenticated.userAccount.list.label.username" path="username" width="10%" />	
 </acme:list>
 
 <acme:form readonly="true">
-	<acme:form-return code="authenticated.message.list.button.return"/>
+	<acme:form-return code="authenticated.userAccount.list.button.return"/>
 </acme:form>
