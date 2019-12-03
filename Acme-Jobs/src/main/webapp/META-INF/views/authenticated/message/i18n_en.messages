@@ -11,6 +11,7 @@
 authenticated.message.list.label.title = Message's title
 authenticated.message.list.label.moment = Creation moment
 authenticated.message.list.label.tags = Tags
+authenticated.message.list.label.messageThread.title = Thread's title
 authenticated.message.list.button.return = Return to my threads' list
 
 authenticated.message.form.label.title = Message's title
@@ -18,4 +19,5 @@ authenticated.message.form.label.moment = Creation moment
 authenticated.message.form.label.tags = Tags
 authenticated.message.form.label.body = Message's body
 authenticated.message.form.label.userAccount.username = Username
+authenticated.message.form.label.messageThread.title = Thread's title
 authenticated.message.form.button.return = Return

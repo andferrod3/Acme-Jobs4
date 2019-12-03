@@ -14,5 +14,4 @@ authenticated.messageThread.list.label.moment = Fecha de creación
 authenticated.messageThread.form.label.title = Título del hilo
 authenticated.messageThread.form.label.moment = Fecha de creación
 authenticated.messageThread.form.label.messages = Mensajes del hilo
-authenticated.messageThread.form.label.users = Usuarios del hilo
 authenticated.messageThread.form.button.return = Volver
