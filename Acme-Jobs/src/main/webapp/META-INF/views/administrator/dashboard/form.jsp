@@ -47,6 +47,14 @@
 	<canvas id="canvas2"></canvas>
 </div>
 
+<div>
+	<canvas id="canvas3"></canvas>
+</div>
+
+<div>
+	<canvas id="canvas4"></canvas>
+</div>
+
 
 <script type="text/javascript">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -95,7 +103,7 @@
 		var canvas, context, canvas2, context2;
 		
 		canvas = document.getElementById("canvas");
-		canvas2 = document.getElementById("canvas2")
+		canvas2 = document.getElementById("canvas2");
 		context = canvas.getContext("2d");
 		context2 = canvas2.getContext("2d");
 		new Chart(context, {
@@ -107,6 +115,57 @@
 		new Chart(context2,{
 			type : "bar",
 			data : data2,
+			options : options
+		});
+		
+		var data3 = {
+				labels :   ["PENDING", "ACCEPTED", "REJECTED"],  
+				datasets: [
+					{	label : "Ratio of Applications depending on the status",
+						data : [
+								<jstl:out value="${ratioOfPendingApplications}" />,
+								<jstl:out value="${ratioOfAcceptedApplications}" />,
+								<jstl:out value="${ratioOfRejectedApplications}" />
+								]
+						
+					}
+				]
+		};
+		
+
+		var canvas3, context3;
+
+		canvas3 = document.getElementById("canvas3");
+		context3 = canvas3.getContext("2d");
+		
+		new Chart(context3,{
+			type : "bar",
+			data : data3,
+			options : options
+		});
+		
+		var data4 = {
+				labels :   ["DRAFT", "PUBLISHED"],  
+				datasets: [
+					{	label : "Ratio of Jobs depending on the status",
+						data : [
+								<jstl:out value="${ratioOfDraftJobs}" />,
+								<jstl:out value="${ratioOfPublishedJobs}" />
+								]
+						
+					}
+				]
+		};
+		
+
+		var canvas4, context4;
+
+		canvas4 = document.getElementById("canvas4");
+		context4 = canvas4.getContext("2d");
+		
+		new Chart(context4,{
+			type : "bar",
+			data : data4,
 			options : options
 		});
 		
