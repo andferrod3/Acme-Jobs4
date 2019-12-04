@@ -101,6 +101,7 @@ master.menu.auditor.features.job.list = List jobs that contains my audit records
 # master.menu.sponsor ##########################################################
 master.menu.sponsor = Sponsor
 master.menu.sponsor.commercial-banner.list-mine = List commercial banners
+master.menu.sponsor.non-commercial-banner.list-mine = List my non commmercial banners
 
 # master.menu.user-account ####################################################
 
