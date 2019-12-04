@@ -22,4 +22,8 @@
 		<put-attribute name="body" type="template" value="../sponsor/commercial-banner/list.jsp" />
 	</definition>
 	
+	<definition name="sponsor/commercial-banner/form" extends="master">
+		<put-attribute name="body" type="template" value="../sponsor/commercial-banner/form.jsp" />
+	</definition>
+	
 </tiles-definitions>

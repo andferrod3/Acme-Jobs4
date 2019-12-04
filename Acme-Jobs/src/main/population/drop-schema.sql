@@ -59,6 +59,10 @@
        drop 
        foreign key `FKn5adlx3oqjna7aupm8gwg3fuj`;
 
+    alter table `non_commercial_banner` 
+       drop 
+       foreign key `FKpcpr0xb5k7s4rxv5pulstt5v9`;
+
     alter table `provider` 
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
