@@ -98,6 +98,10 @@ master.menu.auditor.features.audit-record.list = List audit records
 master.menu.auditor.features.notwrittenjob.list = List jobs with audit records not written by me
 master.menu.auditor.features.job.list = List jobs that contains my audit records
 
+# master.menu.sponsor ##########################################################
+master.menu.sponsor = Sponsor
+master.menu.sponsor.commercial-banner.list-mine = List commercial banners
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account

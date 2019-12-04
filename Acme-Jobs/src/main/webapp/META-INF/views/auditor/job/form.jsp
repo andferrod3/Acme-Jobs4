@@ -26,7 +26,7 @@
 	<acme:form-checkbox code="auditor.job.form.label.draft" path="draft" />
 	<acme:form-hidden path="id"/>
 	<acme:form-submit code="auditor.job.form.label.duty" action="/auditor/duty/list?id=${id}" method="get"/>
-	<acme:form-submit code="auditor.job.form.button.link" action="/auditor/audit-record/list-mine?id=${id}" method="get" />
+	<acme:form-submit code="auditor.job.form.button.link" action="/auditor/audit-record/list?id=${id}" method="get" />
 	
 	<acme:form-return code="auditor.job.form.button.return"/>
 </acme:form>
