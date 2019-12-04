@@ -1,5 +1,5 @@
 
-package acme.features.auditor.writtenJob;
+package acme.features.auditor.job;
 
 import java.util.Calendar;
 import java.util.Collection;
@@ -17,10 +17,10 @@ import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuditorWrittenJobListMineService implements AbstractListService<Auditor, Job> {
+public class AuditorJobListNotWrittenService implements AbstractListService<Auditor, Job> {
 
 	@Autowired
-	AuditorWrittenJobRepository repository;
+	AuditorJobRepository repository;
 
 
 	@Override
@@ -44,11 +44,10 @@ public class AuditorWrittenJobListMineService implements AbstractListService<Aud
 		Principal principal;
 
 		principal = request.getPrincipal();
-
 		Calendar actual = new GregorianCalendar();
 
 		Date fechaActual = actual.getTime();
-		result = this.repository.findManyByEmployerId(principal.getActiveRoleId(), fechaActual);
+		result = this.repository.findManyByAuditorId(principal.getActiveRoleId(), fechaActual);
 
 		result.stream().forEach(j -> j.setEmployer(this.repository.findEmployer(j.getId())));
 

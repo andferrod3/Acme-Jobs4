@@ -73,8 +73,8 @@
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
-			<acme:menu-suboption code="master.menu.auditor.features.notwrittenjob.list" action="/auditor/job-not-written/list-not-mine"/>
-			<acme:menu-suboption code="master.menu.auditor.features.job.list" action="/auditor/job-written/list-mine"/>
+			<acme:menu-suboption code="master.menu.auditor.features.notwrittenjob.list" action="/auditor/job/list-not-written"/>
+			<acme:menu-suboption code="master.menu.auditor.features.job.list" action="/auditor/job/list-written"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.worker" access="hasRole('Worker')">
@@ -82,6 +82,7 @@
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.sponsor" access="hasRole('Sponsor')">
+      		<acme:menu-suboption code="master.menu.sponsor.commercial-banner.list-mine" action="/sponsor/commercial-banner/list-mine"/>
       		<acme:menu-suboption code="master.menu.sponsor.non-commercial-banner.list-mine" action="/sponsor/non-commercial-banner/list-mine"/>
 		</acme:menu-option>
 		

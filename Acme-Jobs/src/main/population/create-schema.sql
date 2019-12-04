@@ -90,6 +90,7 @@
         `slogan` varchar(255),
         `target_url` varchar(255),
         `credit_card` varchar(255),
+        `sponsor_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -335,6 +336,11 @@ create index IDXby0pqf12tfiy25u5ckjdjg9lo on `request` (`reward_amount`);
        add constraint FK_h52w0f3wjoi68b63wv9vwon57 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `commercial_banner` 
+       add constraint `FKd0k52g7lcacefcp62kb4p9aor` 
+       foreign key (`sponsor_id`) 
+       references `sponsor` (`id`);
 
     alter table `consumer` 
        add constraint FK_6cyha9f1wpj0dpbxrrjddrqed 

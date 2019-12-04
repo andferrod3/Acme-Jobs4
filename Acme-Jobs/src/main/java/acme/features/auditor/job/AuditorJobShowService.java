@@ -1,5 +1,5 @@
 
-package acme.features.auditor.writtenJob;
+package acme.features.auditor.job;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -13,13 +13,14 @@ import acme.entities.roles.Auditor;
 import acme.entities.roles.Employer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AuditorWrittenJobShowService implements AbstractShowService<Auditor, Job> {
+public class AuditorJobShowService implements AbstractShowService<Auditor, Job> {
 
 	@Autowired
-	AuditorWrittenJobRepository repository;
+	AuditorJobRepository repository;
 
 
 	@Override
@@ -29,13 +30,16 @@ public class AuditorWrittenJobShowService implements AbstractShowService<Auditor
 		boolean result;
 		int jobId;
 		Job job;
-
+		Employer employer;
+		Principal principal;
 		jobId = request.getModel().getInteger("id");
 		job = this.repository.findOneJobById(jobId);
+		employer = job.getEmployer();
+		principal = request.getPrincipal();
 		Calendar actual = new GregorianCalendar();
 
 		Date fechaActual = actual.getTime();
-		result = job.getDeadline().after(fechaActual);
+		result = !job.isDraft() && job.getDeadline().after(fechaActual) || (job.isDraft() || !job.getDeadline().after(fechaActual)) && employer.getUserAccount().getId() == principal.getAccountId();
 		return result;
 	}
 	@Override

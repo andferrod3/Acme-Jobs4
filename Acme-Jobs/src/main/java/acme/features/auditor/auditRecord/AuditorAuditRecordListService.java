@@ -13,7 +13,7 @@ import acme.framework.components.Request;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuditorAuditRecordListActiveService implements AbstractListService<Auditor, AuditRecord> {
+public class AuditorAuditRecordListService implements AbstractListService<Auditor, AuditRecord> {
 
 	@Autowired
 	private AuditorAuditRecordRepository repository;
@@ -39,13 +39,11 @@ public class AuditorAuditRecordListActiveService implements AbstractListService<
 	public Collection<AuditRecord> findMany(final Request<AuditRecord> request) {
 		assert request != null;
 		Collection<AuditRecord> result;
-		int auditorId, jobId;
-
-		auditorId = request.getPrincipal().getActiveRoleId();
+		int jobId;
 
 		String[] aux = request.getServletRequest().getQueryString().trim().split("id=");
 		jobId = Integer.parseInt(aux[1]);
-		result = this.repository.findManyActiveByJobId(auditorId, jobId);
+		result = this.repository.findManyActiveByJobId(jobId);
 
 		return result;
 	}

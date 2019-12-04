@@ -31,6 +31,10 @@
        drop 
        foreign key FK_h52w0f3wjoi68b63wv9vwon57;
 
+    alter table `commercial_banner` 
+       drop 
+       foreign key `FKd0k52g7lcacefcp62kb4p9aor`;
+
     alter table `consumer` 
        drop 
        foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
