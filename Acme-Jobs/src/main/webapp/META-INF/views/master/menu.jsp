@@ -81,6 +81,10 @@
       		<acme:menu-suboption code="master.menu.worker.application.list-mine" action="/worker/application/list-mine"/>
 		</acme:menu-option>
 		
+		<acme:menu-option code="master.menu.sponsor" access="hasRole('Sponsor')">
+      		<acme:menu-suboption code="master.menu.sponsor.non-commercial-banner.list-mine" action="/sponsor/non-commercial-banner/list-mine"/>
+		</acme:menu-option>
+		
 	</acme:menu-left>
 
 	<acme:menu-right>
