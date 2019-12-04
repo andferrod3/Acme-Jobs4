@@ -12,3 +12,11 @@ sponsor.commercial-banner.list.label.pictureUrl= Picture Url
 sponsor.commercial-banner.list.label.slogan= Slogan
 sponsor.commercial-banner.list.label.creditCard= Credit Card
 sponsor.commercial-banner.list.label.sponsor.userAccount.username= Sponsor
+
+sponsor.commercial-banner.form.label.pictureUrl= Picture Url
+sponsor.commercial-banner.form.label.slogan= Slogan
+sponsor.commercial-banner.form.label.targetUrl = Target Url
+sponsor.commercial-banner.form.label.creditCard= Credit Card
+sponsor.commercial-banner.form.label.sponsor.userAccount.username= Sponsor
+
+sponsor.commercial-banner.form.button.return = Return

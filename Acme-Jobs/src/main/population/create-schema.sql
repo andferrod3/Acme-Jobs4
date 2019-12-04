@@ -196,6 +196,7 @@
         `slogan` varchar(255),
         `target_url` varchar(255),
         `jingle` varchar(255),
+        `sponsor_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -371,6 +372,11 @@ create index IDXby0pqf12tfiy25u5ckjdjg9lo on `request` (`reward_amount`);
        add constraint `FKn5adlx3oqjna7aupm8gwg3fuj` 
        foreign key (`message_thread_id`) 
        references `message_thread` (`id`);
+
+    alter table `non_commercial_banner` 
+       add constraint `FKpcpr0xb5k7s4rxv5pulstt5v9` 
+       foreign key (`sponsor_id`) 
+       references `sponsor` (`id`);
 
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
