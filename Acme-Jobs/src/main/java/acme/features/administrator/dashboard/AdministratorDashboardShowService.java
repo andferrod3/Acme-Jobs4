@@ -31,7 +31,8 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert model != null;
 
 		request.unbind(entity, model, "totalAnnouncements", "totalCompanyRecords", "totalInvestorRecords", "minRewardRequest", "maxRewardRequest", "averageRewardRequest", "sdRewardRequest", "minRewardOffer", "maxRewardOffer", "averageRewardOffer",
-			"sdMinRewardOffer", "sdMaxRewardOffer", "companiesPerSector", "companySectors", "investorsPerSector", "investorSectors", "avgJobsPerEmployer", "avgApplicationsPerEmployer", "avgApplicationsPerWorker");
+			"sdMinRewardOffer", "sdMaxRewardOffer", "companiesPerSector", "companySectors", "investorsPerSector", "investorSectors", "avgJobsPerEmployer", "avgApplicationsPerEmployer", "avgApplicationsPerWorker", "ratioOfPendingApplications",
+			"ratioOfAcceptedApplications", "ratioOfRejectedApplications", "ratioOfDraftJobs", "ratioOfPublishedJobs");
 	}
 
 	@Override
@@ -89,6 +90,16 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setAvgApplicationsPerEmployer(this.repository.averageNumberOfApplicationsPerEmployer());
 
 		result.setAvgApplicationsPerWorker(this.repository.averageNumberOfApplicationsPerWorker());
+
+		result.setRatioOfAcceptedApplications(this.repository.ratioOfAcceptedApplications());
+
+		result.setRatioOfPendingApplications(this.repository.ratioOfPendingApplications());
+
+		result.setRatioOfRejectedApplications(this.repository.ratioOfRejectedApplications());
+
+		result.setRatioOfDraftJobs(this.repository.ratioOfDraftJobs());
+
+		result.setRatioOfPublishedJobs(this.repository.ratioOfPublishedJobs());
 
 		return result;
 	}
