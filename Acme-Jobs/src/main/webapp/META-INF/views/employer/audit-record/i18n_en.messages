@@ -10,7 +10,6 @@
 
 employer.audit-record.list.label.title=Title
 employer.audit-record.list.label.moment=Creation moment
-employer.audit-record.list.label.body=Body
 employer.audit-record.list.label.draft=Is Draft?
 employer.audit-record.list.label.job=Job title
 

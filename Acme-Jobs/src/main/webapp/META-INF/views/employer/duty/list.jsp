@@ -20,7 +20,7 @@
 	<acme:list-column code="employer.duty.list.label.title" path="title" width="10%" />		
    	<acme:list-column code="employer.duty.list.label.description" path="description" width="40%" />
    	<acme:list-column code="employer.duty.list.label.percentage" path="percentage" width="10%" />
-   	<acme:list-column code="employer.duty.list.label.job.referencee"	path="job.title" width="10%" />
+   	<acme:list-column code="employer.duty.list.label.job.reference"	path="job.reference" width="10%" />
 </acme:list>
 <acme:form>
 	<acme:form-return code="employer.duty.form.button.return"/>
