@@ -59,6 +59,10 @@
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
 
+    alter table `sponsor` 
+       drop 
+       foreign key FK_20xk0ev32hlg96kqynl6laie2;
+
     alter table `worker` 
        drop 
        foreign key FK_l5q1f33vs2drypmbdhpdgwfv3;
@@ -106,6 +110,8 @@
     drop table if exists `provider`;
 
     drop table if exists `request`;
+
+    drop table if exists `sponsor`;
 
     drop table if exists `user_account`;
 
