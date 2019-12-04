@@ -12,6 +12,9 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface SponsorNonCommercialBannerRepository extends AbstractRepository {
 
+	@Query("select ncb from NonCommercialBanner ncb where ncb.id = ?1")
+	NonCommercialBanner findNonCommercialBannerById(int id);
+
 	@Query("select ncb from NonCommercialBanner ncb where ncb.sponsor.id = ?1")
 	Collection<NonCommercialBanner> findNonCommercialBannersBySponsorId(int id);
 

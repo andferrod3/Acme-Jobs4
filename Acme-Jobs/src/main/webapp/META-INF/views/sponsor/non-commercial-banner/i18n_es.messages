@@ -12,3 +12,11 @@ sponsor.non-commercial-banner.list.label.pictureUrl = Url de imagen
 sponsor.non-commercial-banner.list.label.jingle = "Jingle"
 sponsor.non-commercial-banner.list.label.sponsor.organisationName = Nombre de organización
 sponsor.non-commercial-banner.list.label.sponsor.userAccount.username = Usuario de patrocinador
+
+sponsor.non-commercial-banner.form.label.pictureUrl =  Url de imagen
+sponsor.non-commercial-banner.form.label.targetUrl = Url objetivo
+sponsor.non-commercial-banner.form.label.jingle = "Jingle"
+sponsor.non-commercial-banner.form.label.slogan = Eslogan
+sponsor.non-commercial-banner.form.label.sponsor.organisationName = Nombre de organización
+sponsor.non-commercial-banner.form.label.sponsor.userAccount.username = Usuario de patrocinador
+sponsor.non-commercial-banner.form.button.return = Volver

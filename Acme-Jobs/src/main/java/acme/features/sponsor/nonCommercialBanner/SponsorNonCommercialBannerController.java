@@ -18,12 +18,16 @@ import acme.framework.controllers.AbstractController;
 public class SponsorNonCommercialBannerController extends AbstractController<Sponsor, NonCommercialBanner> {
 
 	@Autowired
-	private SponsorNonCommercialBannerListMineService listService;
+	private SponsorNonCommercialBannerListMineService	listService;
+
+	@Autowired
+	private SponsorNonCommercialBannerShowService		showService;
 
 
 	@PostConstruct
 	private void initialise() {
 		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listService);
+		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 
 }

@@ -21,5 +21,9 @@
 	<definition name="sponsor/non-commercial-banner/list" extends="master">
 		<put-attribute name="body" type="template" value="../sponsor/non-commercial-banner/list.jsp" />
 	</definition>
+	
+	<definition name="sponsor/non-commercial-banner/form" extends="master">
+		<put-attribute name="body" type="template" value="../sponsor/non-commercial-banner/form.jsp" />
+	</definition>
 
 </tiles-definitions>
